@@ -1,0 +1,19 @@
+{
+  "type": "postgres",
+  "host": "127.0.0.1",
+  "port": 5432,
+  "username": "postgres",
+  "password": "gldlii8N",
+  "database": "GameEngine",
+  "entities": [
+    "dist/entity/**/*.js"
+  ],
+  "migrationsTableName": "migration",
+  "migrations": [
+    "dist/migration/**/*.js"
+  ],
+  "cli": {
+    "migrationsDir": "migration"
+  },
+  "ssl": false
+}
