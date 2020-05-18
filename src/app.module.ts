@@ -11,6 +11,7 @@ import { GameService } from './game/game.service';
 import { GameEntity } from './game/game.entity';
 import { GameController } from './game/game.controller';
 import { AuthController } from './controller/auth.controller';
+import { UserStatusEntity } from './entity/user-status.entity';
 
 @Module({
   imports: [
@@ -18,7 +19,8 @@ import { AuthController } from './controller/auth.controller';
     TypeOrmModule.forFeature([
       UserEntity,
       PlayerEntity,
-      GameEntity
+      GameEntity,
+      UserStatusEntity
     ])
   ],
   controllers: [UserController, PlayerController, GameController, AuthController],

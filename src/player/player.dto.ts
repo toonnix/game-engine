@@ -1,10 +1,10 @@
 import { ApiProperty } from '@nestjs/swagger';
-import { PlayerEntity } from 'src/player/player.entity';
-import { MaxLength, IsUUID } from 'class-validator';
-import { TokenInHand } from 'src/player/player.entity';
 import { Generated } from 'typeorm';
+import { IsUUID, MaxLength } from 'class-validator';
+import { TokenInHand, PlayerEntity } from './player.entity';
 import { UserStatusEntity } from 'src/entity/user-status.entity';
 import { GameEntity } from 'src/game/game.entity';
+
 
 export class PlayerDTO implements Readonly<PlayerDTO> {
   @ApiProperty({ type: 'string' })

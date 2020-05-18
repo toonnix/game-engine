@@ -1,11 +1,11 @@
-import { Entity, Column, OneToOne, ManyToOne, JoinColumn, JoinTable } from 'typeorm';
+import { Entity, Column, OneToOne, ManyToOne } from 'typeorm';
 import { BaseEntity } from './base.entity';
 import { PlayerEntity } from '../player/player.entity';
 import { GameEntity } from '../game/game.entity';
 
 export enum UserStatusEnum {
   AVAILABLE = 'AVAILABLE',
-  PLAYING = 'AVAILABLE'
+  PLAYING = 'PLAYING'
 }
 
 @Entity({ name: 'userStatus' })
@@ -17,7 +17,6 @@ export class UserStatusEntity extends BaseEntity {
   userStatus: UserStatusEnum;
 
   @OneToOne(type => PlayerEntity)
-  @JoinColumn()
   player: PlayerEntity;
 
   @ManyToOne(type => GameEntity, game => game.users)

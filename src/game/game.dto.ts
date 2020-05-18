@@ -29,11 +29,11 @@ export class GameDTO implements Readonly<GameDTO> {
   @ApiProperty({ type: 'integer', default: 0 })
   missionAcquired: number;
 
-  @ApiProperty({ type: LocationStatus })
+  @ApiProperty({ type: [LocationStatus] })
   @IsArray()
   location: LocationStatus[];
 
-  @ApiProperty({ type: 'varchar', isArray: true })
+  @ApiProperty({ type: [String] })
   cardInTimeLine: string[];
 
   @ApiProperty({ type: PlayerEntity, isArray: true })

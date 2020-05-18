@@ -6,14 +6,14 @@
   "password": "gldlii8N",
   "database": "GameEngine",
   "entities": [
-    "dist/entity/**/*.js"
+    "dist/**/*.js"
   ],
   "migrationsTableName": "migration",
   "migrations": [
     "dist/migration/**/*.js"
   ],
   "cli": {
-    "migrationsDir": "migration"
+    "migrationsDir": "src/migration"
   },
   "ssl": false
 }

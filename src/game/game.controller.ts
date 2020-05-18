@@ -25,9 +25,4 @@ export class GameController {
   public async delete(@Param('id') id: number) {
     return await this.serv.delete(id);
   }
-
-  @Post()
-  public async startGame(@Body() dto: GameDTO): Promise<GameDTO> {
-    return this.serv.create(dto);
-  }
 }

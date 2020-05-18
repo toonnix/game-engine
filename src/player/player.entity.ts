@@ -1,4 +1,4 @@
-import { Entity, Column, PrimaryGeneratedColumn, ManyToOne, OneToOne } from 'typeorm';
+import { Entity, Column, PrimaryGeneratedColumn, ManyToOne, OneToOne, JoinColumn } from 'typeorm';
 import { BaseEntity } from '../entity/base.entity';
 import { MaxLength } from 'class-validator';
 import { GameEntity } from '../game/game.entity';
@@ -37,6 +37,7 @@ export class PlayerEntity extends BaseEntity {
   tokenInHand: TokenInHand;
 
   @OneToOne(type => UserStatusEntity)
+  @JoinColumn()
   userStatus: UserStatusEntity;
 
   @ManyToOne(type => GameEntity, game => game.players)
